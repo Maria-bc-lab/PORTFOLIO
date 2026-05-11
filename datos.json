@@ -1,0 +1,17 @@
+{
+  "nombre": "María Blanco",
+  "github": "https://github.com/Maria-bc-lab",
+  "linkedin": "https://www.linkedin.com/in/maria-blanco-chiquero-a6339265",
+  "proyectos": [
+    {
+      "titulo": "Guía El Burgo de Osma",
+      "repo": "https://github.com/Maria-bc-lab/Gu-a-de-Burgo-de-Osma",
+      "web": "https://guía-el-burgo-de-osma.netlify.app"
+    },
+    {
+      "titulo": "Guía Lisboa - Costa Caparica",
+      "repo": "https://github.com/Maria-bc-lab/Guia-Lisboa---Costa-Caparica",
+      "web": "https://guía-lisboa-caparica-2026.netlify.app"
+    }
+  ]
+}

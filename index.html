@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>María Blanco | Especialista en IA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+
+        :root {
+            --bg: #05070a;
+            --accent: #007aff;
+            --card: #0d1117;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: clamp(1.5rem, 5vw, 3.5rem);
+            margin: 0;
+            background: linear-gradient(90deg, #fff, var(--accent), #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .subtitle {
+            color: #666;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: 0.4s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 122, 255, 0.1);
+        }
+
+        /* CONTENEDOR DE IMAGEN ANIMADA */
+        .img-box {
+            width: 100%;
+            height: 250px;
+            background: #161b22;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 110%;
+            /* Un poco más grande para que tenga margen de movimiento */
+            height: 110%;
+            object-fit: cover;
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            /* Animación suave constante */
+            animation: moveImage 12s ease-in-out infinite alternate;
+        }
+
+        /* Definición del movimiento (Efecto Ken Burns) */
+        @keyframes moveImage {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(1.1) translate(-2%, -2%);
+            }
+        }
+
+        .info {
+            padding: 30px;
+        }
+
+        .info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .info p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btns {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-web {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-git {
+            border: 1px solid var(--border);
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MARÍA BLANCO</h1>
+            <p class="subtitle">Especialista en IA Aplicada & Soluciones Digitales</p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <div class="img-box">
+                    <img src="burgo.jpg" alt="El Burgo de Osma">
+                </div>
+                <div class="info">
+                    <h3>El Burgo de Osma</h3>
+                    <p>Guía interactiva con arquitectura escalable. Visualización dinámica de entornos históricos.</p>
+                    <div class="btns">
+                        <a href="https://guia-el-burgo-de-osma.netlify.app" class="btn btn-web" target="_blank">Ver
+                            Web</a>
+                        <a href="https://github.com/Maria-bc-lab/Gu-a-de-Burgo-de-Osma" class="btn btn-git"
+                            target="_blank">Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box">
+                    <img src="lisboa.jpg" alt="Lisboa Caparica">
+                </div>
+                <div class="info">
+                    <h3>Lisboa - Caparica</h3>
+                    <p>Plataforma turística internacional. Gestión de rutas con interfaces animadas de alta fidelidad.
+                    </p>
+                    <div class="btns">
+                        <a href="https://guia-lisboa-caparica-2026.netlify.app" class="btn btn-web" target="_blank">Ver
+                            Web</a>
+                        <a href="https://github.com/Maria-bc-lab/Guia-Lisboa---Costa-Caparica" class="btn btn-git"
+                            target="_blank">Código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://www.linkedin.com/in/maria-blanco-chiquero-a6339265" target="_blank">LINKEDIN</a>
+            <a href="https://github.com/Maria-bc-lab" target="_blank">GITHUB PROFILE</a>
+        </footer>
+    </div>
+
+</body>
+
+</html>
